@@ -24,19 +24,18 @@ class Spasm(Package):
 
     phases = ['automake', 'configure', 'build', 'install']
 
-    def automake(self):
-    	autoreconf -i
+    force_autoreconf = True
 
-    def configure(self):
+    def configure(self, spec, prefix):
         configure_script = Executable("./configure")
         configure(*self)
 
-    def build(self):
+    def build(self, spec, prefix):
         make()
         if self.run_tests:
             make("check")
 
-    def install(self):
+    def install(self, spec, prefix):
         #options = ["--prefix=%s" % prefix,
         #           "--with-gmp=%s" % spec['gmp'].prefix,
         #           "--with-mpfr=%s" % spec['mpfr'].prefix]
