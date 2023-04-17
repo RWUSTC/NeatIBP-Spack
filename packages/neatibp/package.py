@@ -5,7 +5,7 @@
 
 from spack import *
 
-class NeatIBP(Package):
+class NeatIBP(AutotoolsPackage):
 
     git      = "https://github.com/yzhphy/NeatIBP.git"
 
