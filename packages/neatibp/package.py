@@ -15,3 +15,4 @@ class Neatibp(AutotoolsPackage):
 
 
     depends_on('spasm@1.2')
+    depends_on('singular@snapshot_22_03')
