@@ -21,19 +21,33 @@ class Spasm(Package):
 
     # Build dependencies
     depends_on("m4", type="build")
-    depends_on("autoconf", when="@master", type="build")
-    depends_on("automake", when="@master", type="build")
-    depends_on("libtool", when="@master", type="build")
+    depends_on("autoconf",  type="build")
+    depends_on("automake",  type="build")
+    depends_on("libtool", type="build")
 
     phases = ['autoreconf', 'configure', 'build', 'install']
 
+    def configure_args(self):
+        prefix = self.prefix
+        spec = self.spec
+        args = ["--prefix=%s" % prefix]
+
+        # if '+mpir' in spec:
+        #     args.extend([
+        #         "--with-mpir=%s" % spec['mpir'].prefix
+        #     ])
+
+        return args
+
     def autoreconf(self, spec, prefix):
-        # Versions of autoconf greater than 2.69 need config.guess
-            autoreconf("-i")
+        autoreconf = which("autoreconf")
+        automake = which("automake")
+        autoreconf("-i")
+        automake("--add-missing")
 
     def configure(self, spec, prefix):
         configure_script = Executable("./configure")
-        configure()
+        configure(*self.configure_args())
 
     def build(self, spec, prefix):
         make()
@@ -49,4 +63,5 @@ class Spasm(Package):
         #if self.run_tests:
         #    make("check")
         make("install")
+
 

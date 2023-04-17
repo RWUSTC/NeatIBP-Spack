@@ -16,3 +16,9 @@ class Neatibp(AutotoolsPackage):
 
     depends_on('spasm@1.2')
     depends_on('singular@snapshot_22_03')
+    
+    def setup_run_environment(self, env):
+        spec = self.spec
+        env.set('SINGULAR_INSTALL_DIR', spec['singular'].prefix)
+        env.set('NEATIBP_INSTALL_DIR', self.prefix)
+        env.set('SPASM_INSTALL_DIR', spec['spasm'].prefix)
