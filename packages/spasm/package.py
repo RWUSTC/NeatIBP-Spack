@@ -6,7 +6,7 @@
 from spack import *
 
 
-class SpaSM(Package):
+class Spasm(Package):
     """SpaSM installation."""
 
     git      = "https://github.com/cbouilla/spasm.git"
