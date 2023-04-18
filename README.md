@@ -6,6 +6,7 @@ write access. In the following, we assume this path is set as the environment va
 `software_ROOT`, as detailed in the following example:
 
 ```bash
+mkdir ~/neatibp-spack
 export software_ROOT=~/neatibp-spack
 
 ```
