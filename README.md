@@ -1,5 +1,6 @@
 # NeatIBP-Spack
-Spack package for NeatIBP
+This is the Spack package for <a href="https://github.com/yzhphy/NeatIBP">NeatIBP</a>
+
 We will assume that the user has some directory path with read and
 write access. In the following, we assume this path is set as the environment variable
 `software_ROOT`, as detailed in the following example:
