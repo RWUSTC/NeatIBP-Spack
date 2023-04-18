@@ -101,31 +101,24 @@ Then one should change to the default_settings.txt and modify the following vari
 
 
 ```bash
-#!/bin/bash
 
-# Assign the filename
-filename="default_settings.txt"
+cd $NEATIBP_INSTALL_DIR
 
-# Take the search string
+filename = "default_settings.txt"
+
 search = "/usr/local/lib"
 
-# Take the replace string
-replace = $SPASM_INSTALL_PATH
+replace = $SPASM_INSTALL_DIR
 
 if [[ $search != "" && $replace != "" ]]; then
   sed -i "s/$search/$replace/" $filename
 fi
 
-#!/bin/bash
-
-# Assign the filename
 filename="default_settings.txt"
 
-# Take the search string
 search = "/usr/bin/Singular"
 
-# Take the replace string
-replace = $SINGULAR_INSTALL_PATH
+replace = $SINGULAR_INSTALL_DIR
 
 if [[ $search != "" && $replace != "" ]]; then
   sed -i "s/$search/$replace/" $filename
@@ -134,4 +127,6 @@ fi
 ```
 
 
-Please refer to the repos of the various packages on how to use them.
+Please refer to the repos of NeatIBP on how to use them.
+
+URL: https://github.com/yzhphy/NeatIBP
