@@ -95,7 +95,7 @@ If you install your first package, this will take a bit of time since a lot of d
 To use the package you have to load it:
 
 ```bash
-spack load pfd-parallel
+spack load neatibp
 
 ```
 Then one should change to the default_settings.txt and modify the following variables to the installation of the dependencies:
