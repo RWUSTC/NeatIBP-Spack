@@ -27,3 +27,4 @@ class Neatibp(Package):
         spec = self.spec
         env.set('SINGULAR_INSTALL_DIR', spec['singular'].prefix)
         env.set('SPASM_INSTALL_DIR', spec['spasm'].prefix)
+        env.set('NEATIBP_INSTALL_DIR', self.prefix)
