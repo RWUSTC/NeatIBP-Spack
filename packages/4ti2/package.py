@@ -41,3 +41,4 @@ class _4ti2(AutotoolsPackage):
     depends_on("automake", type="build", when="@1.6.9 build_system=autotools")
     depends_on("libtool", type="build", when="@1.6.9 build_system=autotools")
 
+

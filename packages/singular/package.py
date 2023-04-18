@@ -45,3 +45,4 @@ class Singular(AutotoolsPackage):
                , '--enable-gfanlib'
                ]
         return args
+
