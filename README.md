@@ -105,9 +105,9 @@ Then one should change to the default_settings.txt and modify the following vari
 
 cd $NEATIBP_INSTALL_DIR
 
-sed -i 's@/usr/local/lib@'"$SPASM_INSTALL_DIR"'@' default_settings.txt
+sed -i 's@/usr/local/lib@'"$SPASM_INSTALL_DIR/lib"'@' default_settings.txt
 
-sed -i 's@/usr/bin/Singular@'"$SINGULAR_INSTALL_DIR"'@' default_settings.txt
+sed -i 's@/usr/bin/Singular@'"$SINGULAR_INSTALL_DIR/bin"'@' default_settings.txt
 
 ```
 
