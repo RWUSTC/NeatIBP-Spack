@@ -107,7 +107,6 @@ cd $NEATIBP_INSTALL_DIR
 
 sed -i 's@/usr/local/lib@'"$SPASM_INSTALL_DIR"'@' default_settings.txt
 
-
 sed -i 's@/usr/bin/Singular@'"$SINGULAR_INSTALL_DIR"'@' default_settings.txt
 
 ```
