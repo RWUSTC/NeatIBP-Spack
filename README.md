@@ -105,25 +105,10 @@ Then one should change to the default_settings.txt and modify the following vari
 
 cd $NEATIBP_INSTALL_DIR
 
-filename = "default_settings.txt"
+sed -i 's@/usr/local/lib@'"$SPASM_INSTALL_DIR"'@' default_settings.txt
 
-search = "/usr/local/lib"
 
-replace = $SPASM_INSTALL_DIR
-
-if [[ $search != "" && $replace != "" ]]; then
-  sed -i "s/$search/$replace/" $filename
-fi
-
-filename="default_settings.txt"
-
-search = "/usr/bin/Singular"
-
-replace = $SINGULAR_INSTALL_DIR
-
-if [[ $search != "" && $replace != "" ]]; then
-  sed -i "s/$search/$replace/" $filename
-fi
+sed -i 's@/usr/bin/Singular@'"$SINGULAR_INSTALL_DIR"'@' default_settings.txt
 
 ```
 
