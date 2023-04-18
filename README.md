@@ -111,6 +111,7 @@ sed -i 's@/usr/bin/Singular@'"$SINGULAR_INSTALL_DIR/bin"'@' default_settings.txt
 
 ```
 
+After this, NeatIBP is good to go.
 
 Please refer to the repos of NeatIBP on how to use them.
 
