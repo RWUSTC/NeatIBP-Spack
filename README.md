@@ -111,6 +111,7 @@ sed -i 's@/usr/local/lib@'"$SPASM_INSTALL_DIR/lib"'@' default_settings.txt
 sed -i 's@/usr/bin/Singular@'"$SINGULAR_INSTALL_DIR/bin"'@' default_settings.txt
 
 ```
+One should copy the main files to some directory
 
 After this, NeatIBP is good to go.
 
