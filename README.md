@@ -110,8 +110,52 @@ sed -i 's@/usr/local/lib@'"$SPASM_INSTALL_DIR/lib"'@' default_settings.txt
 
 sed -i 's@/usr/bin/Singular@'"$SINGULAR_INSTALL_DIR/bin"'@' default_settings.txt
 
+sed -i 's@$(dirname $( realpath ${BASH_SOURCE}))@'"$NEATIBP_INSTALL_DIR/NeatIBP"'@' run.sh
+
+sed -i 's@$(dirname $( realpath ${BASH_SOURCE}))@'"$NEATIBP_INSTALL_DIR/NeatIBP"'@' monitor.sh
+
+sed -i 's@$(dirname $( realpath ${BASH_SOURCE}))@'"$NEATIBP_INSTALL_DIR/NeatIBP"'@' continue.sh
+
 ```
-One should copy the main files to some directory
+One should copy the main files to some directory, for example, $software_ROOT/NeatIBP
+
+```bash
+
+cd $software_ROOT/NeatIBP
+
+cp $NEATIBP_INSTALL_DIR/NeatIBP/continue.sh continue.sh
+
+cp $NEATIBP_INSTALL_DIR/NeatIBP/run.sh run.sh
+
+cp $NEATIBP_INSTALL_DIR/NeatIBP/monitor.sh monitor.sh
+
+cp $NEATIBP_INSTALL_DIR/NeatIBP/default_settings.txt config.txt
+
+mkdir outputs
+
+```
+
+One can test one of the examples in this folder, for example, double box,
+
+
+```bash
+
+cd $software_ROOT/NeatIBP
+
+cp $NEATIBP_INSTALL_DIR/NeatIBP/examples/dbox/kinematics.txt kinematics.txt
+
+cp $NEATIBP_INSTALL_DIR/NeatIBP/examples/dbox/targetIntegrals.txt targetIntegrals.txt
+
+```
+
+And, one can run:
+
+
+```bash
+
+./run.sh
+
+```
 
 After this, NeatIBP is good to go.
 
