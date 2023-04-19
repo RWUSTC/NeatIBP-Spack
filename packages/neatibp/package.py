@@ -10,7 +10,7 @@ class Neatibp(Package):
     homepage = "https://github.com/yzhphy/NeatIBP/"
     git      = "https://github.com/yzhphy/NeatIBP.git"
 
-    # maintainers = ['github_user1', 'github_user2']
+    maintainers = ['Wu-Zihao', 'yzhphy', 'RWUSTC']
 
     version('1.0.1.2', branch='main')
 

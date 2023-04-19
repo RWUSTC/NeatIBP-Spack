@@ -11,6 +11,8 @@ class Spasm(Package):
 
     git      = "https://github.com/cbouilla/spasm.git"
 
+    maintainers = ['ClaireDlp', 'cbouilla']
+    
     version('1.2', branch='master')
 
     # Overlap in functionality between gmp and mpir
