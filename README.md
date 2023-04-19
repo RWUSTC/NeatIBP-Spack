@@ -104,7 +104,7 @@ Then one should change to the default_settings.txt and modify the following vari
 
 ```bash
 
-cd $NEATIBP_INSTALL_DIR
+cd $NEATIBP_INSTALL_DIR/NeatIBP
 
 sed -i 's@/usr/local/lib@'"$SPASM_INSTALL_DIR/lib"'@' default_settings.txt
 
