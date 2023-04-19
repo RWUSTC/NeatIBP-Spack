@@ -8,6 +8,7 @@ write access. In the following, we assume this path is set as the environment va
 ```bash
 mkdir ~/neatibp-spack
 export software_ROOT=~/neatibp-spack
+export install_ROOT=~/neatibp-install
 
 ```
 Note, this needs to be set again if you open a new terminal session (preferably set it automatically by adding the line to your .profile file).
@@ -99,8 +100,17 @@ To use the package you have to load it:
 spack load neatibp
 
 ```
-Then one should change to the default_settings.txt and modify the following variables to the installation of the dependencies:
+Then one should change to the default_settings.txt and modify the following variables to the installation of the dependencies. 
 
+One can just run:
+
+
+```bash
+
+./$install_ROOT/spack_sub_script.sh
+
+```
+Or manually do as the following:
 
 ```bash
 
@@ -117,11 +127,11 @@ sed -i 's@$(dirname $( realpath ${BASH_SOURCE}))@'"$NEATIBP_INSTALL_DIR/NeatIBP"
 sed -i 's@$(dirname $( realpath ${BASH_SOURCE}))@'"$NEATIBP_INSTALL_DIR/NeatIBP"'@' continue.sh
 
 ```
-One should copy the main files to some directory, for example, $software_ROOT/NeatIBP
+One should copy the main files to some directory, for example, $install_ROOT/NeatIBP
 
 ```bash
 
-cd $software_ROOT/NeatIBP
+cd $install_ROOT/NeatIBP
 
 cp $NEATIBP_INSTALL_DIR/NeatIBP/continue.sh continue.sh
 
@@ -140,7 +150,7 @@ One can test one of the examples in this folder, for example, double box,
 
 ```bash
 
-cd $software_ROOT/NeatIBP
+cd $install_ROOT/NeatIBP
 
 cp $NEATIBP_INSTALL_DIR/NeatIBP/examples/dbox/kinematics.txt kinematics.txt
 
