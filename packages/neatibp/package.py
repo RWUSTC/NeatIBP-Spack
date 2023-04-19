@@ -21,7 +21,7 @@ class Neatibp(Package):
     def install(self, spec, prefix):
         with working_dir(prefix):
             git = which('git')
-            copy = Executable("./spack_script.sh")
+            copy = Executable("./Spack_scripts/spack_script.sh")
             git('clone', self.git)
             copy()
             
