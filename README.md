@@ -103,12 +103,14 @@ spack load neatibp
 ```
 Then one should change to the default_settings.txt and modify the following variables to the installation of the dependencies. 
 
-One can just run:
+One can just run the script to do the substitution and delete the script by:
 
 
 ```bash
 
-./$install_ROOT/spack_sub_script.sh
+sh ~/spack_sub_script.sh
+
+rm -rf ~/spack_sub_script.sh
 
 ```
 Or manually do as the following:
