@@ -12,7 +12,7 @@ class Neatibp(Package):
 
     maintainers = ['Wu-Zihao', 'yzhphy', 'RWUSTC']
 
-    version('1.0.1.2', branch='main')
+    version('1.0.1.3', branch='main')
 
     depends_on('git@2.38.1')
     depends_on('spasm@1.2')
@@ -21,10 +21,11 @@ class Neatibp(Package):
     def install(self, spec, prefix):
         with working_dir(prefix):
             git = which('git')
-            copy = Executable("./Spack_scripts/spack_script.sh")
             git('clone', self.git)
+        with working_dir("Spack_scripts"):
+            copy = Executable("./spack_script_cp.sh")
             copy()
-            
+
 
     def setup_run_environment(self, env):
         spec = self.spec
