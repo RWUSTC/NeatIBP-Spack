@@ -7,6 +7,7 @@ write access. In the following, we assume this path is set as the environment va
 
 ```bash
 mkdir ~/neatibp-spack
+mkdir ~/neatibp-install
 export software_ROOT=~/neatibp-spack
 export install_ROOT=~/neatibp-install
 
